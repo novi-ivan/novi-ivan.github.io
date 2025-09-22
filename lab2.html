@@ -1,0 +1,211 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+  <title>Лаба 2</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style_lab2.css">
+</head>
+
+<body>
+
+<header id="site-header" class="site-header">
+  <div class="container header-inner">
+    <img id="logo" class="logo" src="wlppr.jpg" alt="Логотип сайта">
+
+    <ul class="menu">
+      <li><a href="#links">Список гиперссылок</a></li>
+      <li><a href="#form">Форма</a></li>
+      <li><a href="#table">Таблица</a></li>
+    </ul>
+
+    <h1 class="site-title">Лаба 2</h1>
+  </div>
+</header>
+
+<main id="content" class="container">
+
+  <!-- ======= Список гиперссылок ======= -->
+  <section id="links">
+    <h2>Список гиперссылок</h2>
+
+    <h1>Лаба 2</h1>
+    <p>1)<a href="http://kubsu.ru/">Сайт КубГУ</a></p>
+    <p>2)<a href="https://kubsu.ru/">Сайт КубГУ https</a></p>
+    <p>3)Ссылка-изображение:</p>
+    <a href="http://kubsu.ru/"><img src="wlppr.jpg" alt="обоя" style="width: 200px;" /></a>
+    <p>4) <a href="/cheto/vnutri.html">Короткая на внутреннюю страницу </a></p>
+
+    <p>5) <a href="/">Короткая ссылка на главную</a></p>
+
+    <p>6) <a href="#contract">Перейти к контракту</a></p>
+
+    <p>7) <a href="products?category=books&sort=price&order=asc">URL с 3 параметрами </a></p>
+
+    <p>8) <a href="/item?id=12345">Открыть элемент с id=12345</a></p>
+
+    <p>9) <a href="index2.html">Относительная (текущий каталог) — index2.html</a></p>
+
+    <p>10) <a href="about/contacts.html">Относительная (подкаталог about) — about/contacts.html</a></p>
+
+    <p>11) <a href="../up.html">Относительная (на уровень выше) — ../up.html</a></p>
+
+    <p>12) <a href="../../two-up.html">Относительная (на два уровня выше) — ../../two-up.html</a></p>
+
+    <p>13) контекстная <a href="http://kubsu.ru/">в тексте</a> абзаца</p>
+
+    <p>14) <a href="https://vk.com/wall-43363264_431132#Книга">Фрагмент стороннего сайта</a></p>
+
+    <p>15)</p>
+    <img src="shapes.svg" alt="Карта-изображение" usemap="#shapes" width="300" />
+    <map name="shapes">
+      <area shape="rect" coords="10,10,140,140" href="https://kubsu.ru/" alt="КубГУ (rect)" />
+      <area shape="circle" coords="220,80,50" href="https://www.youtube.com/watch?v=MBe1h80ghKA" alt="видео (circle)" />
+    </map>
+
+    <p>16) <a href="">Пустой href </a></p>
+
+    <p>17) <a>Ссылка без href </a></p>
+
+    <p>18) <a href="example.com" rel="nofollow">ссылку, по которой запрещен переход поисковикам</a></p>
+
+    <p>19) <a href="example.com/noindex" rel="noindex"></a>запрещенную для индексации поисковиками</p>
+
+    <p>20)</p>
+    <ol>
+      <li><a href="https://www.youtube.com/watch?v=MBe1h80ghKA" title="Видео HTML">Видео про HTML</a></li>
+      <li><a href="/faq.html" title="">FAQ</a></li>
+      <li><a href="https://kubsu.ru/" title="Официальный сайт КубГУ">КубГУ</a></li>
+    </ol>
+
+    <p>21) <a href="ftp://user:password@ftp.example.com/files/kassa.txt">FTP: report.csv</a></p>
+  </section>
+  <!-- ======= Таблица ======= -->
+  <section id="table">
+    <h2>Таблица</h2>
+
+    <table class="data-table">
+      <thead>
+      <tr>
+        <th>колонка 1</th>
+        <th>колонка 2</th>
+        <th>колонка 3</th>
+        <th>колонка 4</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>ячейка 1</td>
+        <td>ячейка 2</td>
+        <td>ячейка 3</td>
+        <td>ячейка 4</td>
+      </tr>
+      <tr>
+        <td colspan="2">двойная ячейка</td>
+        <td>еще ячейка</td>
+        <td>текст</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>буква а</td>
+        <td>1</td>
+        <td>133245</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>буквы</td>
+        <td colspan="3">тройная ячейка справа</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>ячеййка 5</td>
+        <td>2</td>
+        <td>990</td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <td colspan="4">-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-</td>
+      </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <section id="form">
+    <h2>Форма</h2>
+    <form action="/"
+          method="POST">
+
+      <label>
+        ФИО:<br />
+        <input name="field-name"
+               type="text"
+               placeholder="Иванов Иван Иванович" />
+      </label><br />
+
+      <label>
+        Телефон:<br />
+        <input name="field-phone"
+               type="tel"
+               placeholder="+7(___)___-__-__"/>
+      </label><br />
+
+      <label>
+        E-mail:<br />
+        <input name="field-email"
+               type="email"
+               placeholder="Введите вашу почту" />
+      </label><br />
+      <label>
+        Дата рождения:<br />
+        <input name="field-birthday"
+               value="2006-11-08"
+               type="date" />
+      </label><br />
+      Пол:<br />
+      <label><input type="radio"
+                    name="sex" value="Значение1"/>
+        Мужской</label>
+      <label><input type="radio"
+                    name="sex" value="Значение2" />
+        Женский</label><br />
+
+      Любимый язык программирования (c множественным выбором):<br />
+      <select name="field-languages-8[]"
+              multiple="multiple">
+        <option value="Pascal">Pascal</option>
+        <option value="C">C</option>
+        <option value="C++">C++</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="PHP">PHP</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+      </select><br />
+
+      <label>
+        Биография:<br />
+        <textarea name="field-bio">Пожалуйста расскажите о себе :) </textarea>
+      </label><br />
+
+      <label><input type="checkbox"
+                    name="field-contract" />
+        С контрактом ознакомлен(а)</label><br />
+
+      <input type="submit" value="Сохранить" />
+    </form>
+    <p><strong id="contract">Нажимая сохранить вы передаете данные нашей компании и мы в праве продать их 3 лицам поделившись с вами 50% прибыли с продажи ваших данных</strong>.</p>
+  </section>
+
+</main>
+
+<footer id="site-footer">
+  <div class="container">
+    <p>© 2025. Иван Новицкий.</p>
+  </div>
+</footer>
+</body>
+</html>
