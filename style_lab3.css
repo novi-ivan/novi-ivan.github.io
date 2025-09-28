@@ -1,0 +1,95 @@
+td, th { border: 1px solid black; }
+body { margin: 0; }
+.cell { text-align: center; }
+
+.container { max-width: none; margin: 0 auto; padding: 0 16px; }
+
+.site-header {
+
+  background: #6f97c4;
+  border: 1px solid #335;
+  padding: 12px 0 20px;
+}
+.header-inner {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 16px;
+  row-gap: 8px;
+  align-items: center;
+}
+.logo {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  width: 72px; height: 72px;
+  border: 1px solid #335;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: #8eb0d3;
+}
+.site-title { grid-column: 2; grid-row: 2; margin: 0; }
+
+.menu {
+  grid-column: 2; grid-row: 1;
+  display: flex; gap: 8px;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #335;
+  background: #8eb0d3;
+  justify-self: start;
+  list-style: none;
+  margin: 0;
+}
+.menu a {
+  text-decoration: none;
+  color: #111;
+  padding: 6px 10px;
+  border: 1px solid #335;
+  background: #c2d7ea;
+}
+
+.sections-flow { display: flex; flex-direction: column; gap: 16px; }
+
+.section-table { order: 1; }
+.section-links { order: 2; }
+.section-form  { order: 3; }
+
+/* Таблица */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.data-table tbody tr:nth-child(odd) {
+  background: #333355;
+}
+.data-table tbody tr:nth-child(even) {
+  background: #b3d4fc;
+}
+
+.site-footer {
+  background: #6f97c4;
+  border: 1px solid #335;
+  margin-top: 24px;
+  padding: 16px 0;
+}
+.footer-inner { display: block; }
+.site-footer p { margin: 0; }
+
+@media screen and (min-width: 800px) {
+  .container { max-width: 960px; }
+  .menu {
+    flex-direction: row;
+    gap: 24px;
+    padding: 6px 10px;
+  }
+  .menu a {
+    border: none;
+    background: transparent;
+    padding: 6px 10px;
+  }
+
+  .section-links { order: 1; }
+  .section-table { order: 2; }
+  .section-form  { order: 3; }
+}
