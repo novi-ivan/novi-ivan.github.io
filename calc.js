@@ -1,27 +1,32 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const product = document.getElementById('product');
-    const quantity = document.getElementById('quantity');
-    const result = document.getElementById('result');
-    const button = document.getElementById('calculate');
+"use strict";
+
+document.addEventListener("DOMContentLoaded", function () {
+    var product = document.getElementById("product");
+    var quantity = document.getElementById("quantity");
+    var result = document.getElementById("result");
+    var button = document.getElementById("calculate");
 
     function formatRub(n) {
-        return n.toLocaleString('ru-RU') + ' ₽';
+        return n.toLocaleString("ru-RU") + " ₽";
     }
 
-    button.addEventListener('click', function () {
-        const qtyStr = quantity.value.trim();
+    button.addEventListener("click", function () {
+        var qtyStr = quantity.value.trim();
 
-        if (!/^[1-9]\d*$/.test(qtyStr)) {
-            result.textContent = 'Ошибка: введите корректное количество (целое число больше нуля).';
-            result.style.color = 'red';
+        if (!(/^[1-9]\d*$/).test(qtyStr)) {
+            result.textContent =
+                "Ошибка: введите корректное количество " +
+                "(целое число больше нуля).";
+            result.style.color = "red";
             return;
         }
 
-        const qty = parseInt(qtyStr, 10);
-        const price = parseInt(product.value, 10);
-        const total = price * qty;
+        var qty = parseInt(qtyStr, 10);
+        var price = parseInt(product.value, 10);
+        var total = price * qty;
 
-        result.style.color = 'black';
-        result.textContent = 'Общая стоимость заказа: ' + formatRub(total);
+        result.style.color = "black";
+        result.textContent =
+            "Общая стоимость заказа: " + formatRub(total);
     });
 });
