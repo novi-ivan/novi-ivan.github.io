@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Калькулятор заказа</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script defer src="./calc2.js"></script>
+</head>
+<body>
+<h1>Меню ресторана</h1>
+
+<label for="product">Выберите блюдо:</label>
+<select id="product">
+  <option value="4200">Филе миньон с трюфельным соусом — 4200 ₽</option>
+  <option value="5600">Лобстер с лимонным маслом — 5600 ₽</option>
+  <option value="2900">Паста с черными трюфелями — 2900 ₽</option>
+  <option value="9500">Бокал вина Château Margaux 2015 — 9500 ₽</option>
+</select>
+
+<fieldset style="margin-top:1rem;">
+  <legend>Тип услуги</legend>
+  <label><input type="radio" name="serviceType" value="1" checked>без доп. опций</label>
+  <label><input type="radio" name="serviceType" value="2">Добавки </label>
+  <label><input type="radio" name="serviceType" value="3"> Свойства </label>
+</fieldset>
+
+<div id="optionBox" style="display:none; margin:.5rem 0;">
+  <label for="option">Опция:</label>
+  <select id="option">
+
+    <option value="0">Без доп. опции (0 ₽)</option>
+    <option value="300">Гарнир «Пармезан» (+300 ₽)</option>
+    <option value="600">Соус «Трюфельный» (+600 ₽)</option>
+  </select>
+</div>
+
+<div id="propertyBox" style="display:none; margin:.5rem 0;">
+  <label><input type="checkbox" id="prop" value="400"> Добавить подачу «от шефа» (+400 ₽)</label>
+</div>
+
+<label for="quantity">Количество:</label>
+<input type="text" id="quantity" placeholder="Введите количество (целое число)">
+<button id="calculate" type="button">Рассчитать стоимость</button>
+
+<div id="result" style="margin-top:1rem;"></div>
+</body>
+</html>
