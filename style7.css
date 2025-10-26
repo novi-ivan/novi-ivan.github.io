@@ -1,0 +1,75 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+    font-family: system-ui, Arial, sans-serif;
+    background: #f6f7fb;
+    color: #222;
+    text-align: center;
+    padding: 24px 16px;
+}
+
+.page-title { margin: 0 0 20px; }
+.slider {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    padding: 8px 44px;
+}
+
+.slider__viewport { overflow: hidden; }
+
+.slider__track {
+    display: flex;
+    gap: 12px;
+    transition: transform 0.45s ease;
+    will-change: transform;
+    padding: 8px 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Элемент-слайд */
+.slide {
+    flex: 0 0 calc((100% - 24px) / 3);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e2e4ea;
+}
+.slide img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.slider__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+.slider__arrow:hover { background: rgba(0,0,0,0.65); }
+.slider__arrow--prev { left: 8px; }
+.slider__arrow--next { right: 8px; }
+
+.pager {
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .slider { padding: 8px 40px; }
+    .slide { flex: 0 0 100%; }
+    .slide img { height: 220px; }
+}

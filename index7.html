@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Задание 7 — Галерея-</title>
+    <link rel="stylesheet" href="style7.css">
+</head>
+<body>
+<header class="page-header">
+    <h1 class="page-title">Галерея изображений</h1>
+</header>
+
+<main>
+    <section class="slider" aria-label="Слайдер галереи">
+        <button class="slider__arrow slider__arrow--prev" id="btnPrev" aria-label="Предыдущие изображения" type="button">
+            &#10094;
+        </button>
+
+        <div class="slider__viewport">
+            <ul class="slider__track" id="track" role="list">
+                <li class="slide"><img src="https://picsum.photos/id/1015/800/600" alt="Гора"></li>
+                <li class="slide"><img src="https://picsum.photos/id/1025/800/600" alt="Собака"></li>
+                <li class="slide"><img src="https://picsum.photos/id/1035/800/600" alt="Пейзаж"></li>
+                <li class="slide"><img src="https://picsum.photos/id/1045/800/600" alt="Озеро"></li>
+                <li class="slide"><img src="https://picsum.photos/id/1055/800/600" alt="Лес"></li>
+                <li class="slide"><img src="https://picsum.photos/id/1065/800/600" alt="Город"></li>
+                <li class="slide"><img src="https://picsum.photos/id/1075/800/600" alt="Дорога"></li>
+                <li class="slide"><img src="https://picsum.photos/id/83/2560/1920" alt="Закат"></li>
+            </ul>
+        </div>
+
+        <button class="slider__arrow slider__arrow--next" id="btnNext" aria-label="Следующие изображения" type="button">
+            &#10095;
+        </button>
+    </section>
+
+    <div class="pager" aria-live="polite">
+        Страница <span id="currentPage">1</span> / <span id="totalPages">1</span>
+    </div>
+</main>
+
+<script src="app7.js"></script>
+</body>
+</html>
